@@ -21,7 +21,7 @@ const PullDecks = ({ pullNewDecks }) => {
   };
   return (
     <div>
-      <button onClick={() => handleGetDecks()}>get card</button>
+      <button onClick={() => handleGetDecks()}>Get Decks</button>
     </div>
   );
 };

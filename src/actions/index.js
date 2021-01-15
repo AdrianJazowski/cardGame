@@ -14,3 +14,9 @@ export const pullCardFromDeck = (card) => {
     payload: card,
   };
 };
+export const restartGame = (restartSetting) => {
+  return {
+    type: actionsTypes.RESTART_SETTINGS,
+    payload: restartSetting,
+  };
+};

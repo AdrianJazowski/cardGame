@@ -24,8 +24,16 @@ const reducer = (state = initialState, action) => {
         ...state,
         actualHand: [...state.actualHand, payload],
       };
-    // tutaj dodac dodawnie konkretnej karty z api do reki pogrzebac w metodzie w pullsCards
+    case actionsTypes.RESTART_SETTINGS:
+      const { budget, actualHand, roundsHistory, deck } = payload;
 
+      return {
+        ...state,
+        budget: budget,
+        actualHand: actualHand,
+        roundsHistory: roundsHistory,
+        deck: deck,
+      };
     default:
       return state;
   }
