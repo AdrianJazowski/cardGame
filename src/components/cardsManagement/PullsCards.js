@@ -5,11 +5,18 @@ import React from "react";
 import { connect } from "react-redux";
 import { pullCardFromDeck } from "../../actions";
 
-const PullsCards = ({ deckId }) => {
+const PullsCards = ({ deckId, pullCardFromDeck, actualHand }) => {
   const getCardfromDeck = () => {
     axios
       .get(`https://deckofcardsapi.com/api/deck/${deckId}/draw/?count=1`)
-      .then((response) => console.log(response))
+      .then((response) => {
+        console.log(response);
+        const card = response.data.cards[0];
+        pullCardFromDeck(card);
+        console.log(actualHand);
+        console.log(deckId);
+      })
+
       .catch((err) => console.log(err));
   };
 
@@ -26,6 +33,7 @@ const PullsCards = ({ deckId }) => {
 const mapStateToProps = (state) => {
   return {
     deckId: state.deck,
+    actualHand: state.actualHand,
   };
 };
 const mapDispatchToProps = (dispatch) => {
