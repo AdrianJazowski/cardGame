@@ -3,18 +3,15 @@
 import axios from "axios";
 import React from "react";
 import { connect } from "react-redux";
-import { pullCardFromDeck } from "../../actions";
+import { pullCardFromDeckForMyHand } from "../../actions";
 
-const PullsCards = ({ deckId, pullCardFromDeck, actualHand }) => {
+const PullsCards = ({ deckId, pullCardFromDeckForMyHand, playerHand }) => {
   const getCardfromDeck = () => {
     axios
       .get(`https://deckofcardsapi.com/api/deck/${deckId}/draw/?count=1`)
       .then((response) => {
-        console.log(response);
         const card = response.data.cards[0];
-        pullCardFromDeck(card);
-        console.log(actualHand);
-        console.log(deckId);
+        pullCardFromDeckForMyHand(card);
       })
 
       .catch((err) => console.log(err));
@@ -33,12 +30,13 @@ const PullsCards = ({ deckId, pullCardFromDeck, actualHand }) => {
 const mapStateToProps = (state) => {
   return {
     deckId: state.deck,
-    actualHand: state.actualHand,
+    playerHand: state.playerHand,
   };
 };
 const mapDispatchToProps = (dispatch) => {
   return {
-    pullCardFromDeck: (card) => dispatch(pullCardFromDeck(card)),
+    pullCardFromDeckForMyHand: (card) =>
+      dispatch(pullCardFromDeckForMyHand(card)),
   };
 };
 

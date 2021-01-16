@@ -10,7 +10,6 @@ const PullDecks = ({ pullNewDecks }) => {
     axios
       .get("https://deckofcardsapi.com/api/deck/new/shuffle/?deck_count=6")
       .then((response) => {
-        console.log(response);
         const newDecks = response.data.deck_id;
         pullNewDecks(newDecks);
       })

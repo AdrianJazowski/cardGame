@@ -7,9 +7,9 @@ import { restartGame } from "../../actions";
 const Reset = ({ restartGame }) => {
   const handleRestartGame = () => {
     const storeForRestart = {
-      budget: 2000,
-      actualHand: [],
-      roundsHistory: [],
+      credit: 1000,
+      playerHand: [],
+      playerRoundsHistory: [],
       deck: [],
     };
     restartGame(storeForRestart);
