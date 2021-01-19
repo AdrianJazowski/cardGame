@@ -1,6 +1,6 @@
 <!-- @format -->
 
-# React eShop
+# Card Game
 
 ## Overview:
 
