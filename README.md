@@ -1,70 +1,57 @@
-# Getting Started with Create React App
+<!-- @format -->
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# React eShop
 
-## Available Scripts
+## Overview:
 
-In the project directory, you can run:
+Implementation include the following functionality:
 
-### `yarn start`
+- All the cards for the player and dealer are visualized and the game functions as per rules.
+- During the game the hands from every round and their result is saved and displayed in ‘Round History’.
+- The game can be saved and loaded at any time.
+- The game ranking is stored locally and can be viewed at any time
+- The game can be reset at any time.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Intruction
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+- Get Decks - gets decks from api - necessary at the beginning before the game starts
+- Play - starts the round and draws cards for the dealer and the player
+- bid - gets used for betting
+- dobule down - based on the amount transferred to the bid, it can double the bet
+- hit - takes a card from the deck
+- state - ends the turn and should start the dealer's turn
+- restart - restore the game to its initial settings
 
-### `yarn test`
+## Main Tech stack:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- React.js,
+- Redux
 
-### `yarn build`
+## Getting started:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+These instructions will get you a copy of the project up and running on your local machine.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Installing:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+First of all clone the repository to your local machine.
 
-### `yarn eject`
+Check if you have node and npm installed.
+Run these commands in your terminal:
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+### node -v
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### npm -v
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+If you don't have, just go to https://nodejs.org/en/ and install right version.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+After installation check if you have node_modules in your file structure.
 
-## Learn More
+If not, run this command in your terminal :
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### npm install
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Last you need to run the project by command:
 
-### Code Splitting
+### npm start
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Brwoser will automatically open on eg. localhost:3000

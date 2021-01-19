@@ -32,9 +32,27 @@ export const addCardToRoundsHistory = (cards) => {
     payload: cards,
   };
 };
+export const addCardToRoundsHistoryBothPlayers = (cards) => {
+  return {
+    type: actionsTypes.ADD_TO_ROUNDS_HISTORY_BOTH,
+    payload: cards,
+  };
+};
 export const bidBet = (bidCash) => {
   return {
     type: actionsTypes.BID_BET,
     payload: bidCash,
+  };
+};
+export const whoTurnIsNowChange = (change) => {
+  return {
+    type: actionsTypes.CHANGE_WHO_TURN_IS_NOW,
+    payload: change,
+  };
+};
+export const setNewCredit = (cash) => {
+  return {
+    type: actionsTypes.SET_NEW_CREDIT,
+    payload: cash,
   };
 };

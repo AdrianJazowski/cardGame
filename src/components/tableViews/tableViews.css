@@ -1,8 +1,12 @@
 .wrapperForCards{
     display: block;
-    width: 100vw;
-    height: 30vh;
-    background-color: aquamarine;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+}
+.wrapperForCards p{
+    transform: translate(0px, 100px);
+    color: #ffffff;
 }
 .ourHands{
     display: flex;
@@ -16,4 +20,7 @@
     width: 100px;
     height: 150px;
     margin: 5px;
+}
+.actionsWrapper{
+    display: flex;
 }

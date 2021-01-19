@@ -2,15 +2,9 @@
 
 import React from "react";
 import { connect } from "react-redux";
-import Bid from "../creditController/Bid";
 import "./tableViews.css";
 
-const TableViews = ({
-  credit,
-  playerHand,
-  croupierHand,
-  playerRoundsHistory,
-}) => {
+const TableViews = ({ playerHand, croupierHand }) => {
   let valueOfMyHand = 0;
   let valueCroupierHand = 0;
 
@@ -47,7 +41,7 @@ const TableViews = ({
             const { image, value } = hand;
             return (
               <li key={value}>
-                <img className="cardPhoto" src={image}></img>
+                <img className="cardPhoto" src={image} alt={value}></img>
               </li>
             );
           })}
@@ -61,12 +55,11 @@ const TableViews = ({
             const { image, value } = hand;
             return (
               <li key={value}>
-                <img className="cardPhoto" src={image}></img>
+                <img className="cardPhoto" src={image} alt={value}></img>
               </li>
             );
           })}
         </ul>
-        <Bid />
       </div>
     </>
   );

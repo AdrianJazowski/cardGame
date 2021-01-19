@@ -9,8 +9,14 @@ const Reset = ({ restartGame }) => {
     const storeForRestart = {
       credit: 1000,
       playerHand: [],
+      croupierHand: [],
       playerRoundsHistory: [],
-      deck: [],
+      ourBid: 0,
+      cashForWinInThisRound: 0,
+      croupierRoundsHistory: [],
+      deck: null,
+      round: 0,
+      playerTurnIsNow: true,
     };
     restartGame(storeForRestart);
   };

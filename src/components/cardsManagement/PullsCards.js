@@ -23,7 +23,7 @@ const PullsCards = ({ deckId, pullCardFromDeckForMyHand, playerHand }) => {
 
   return (
     <div>
-      <button onClick={() => handleGetCardFromDeck()}>Pull card</button>
+      <button onClick={() => handleGetCardFromDeck()}>Hit</button>
     </div>
   );
 };

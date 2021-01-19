@@ -42,7 +42,7 @@ const GameSetup = ({
   };
   return (
     <div>
-      <button onClick={() => handleStarterGame()}>Start gry</button>
+      <button onClick={() => handleStarterGame()}>Play</button>
     </div>
   );
 };

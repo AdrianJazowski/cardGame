@@ -1,24 +1,36 @@
 /** @format */
 
-import "./App.css";
+import "./Root.css";
 
 import PullDecks from "./components/cardsManagement/PullDecks";
-import PullsCards from "./components/cardsManagement/PullsCards";
 import Reset from "./components/gameLogic/Reset";
 import TableViews from "./components/tableViews/TableViews";
-import AddCardsToRoundsHistory from "./components/cardsManagement/AddCardsToRoundsHistory";
 import GameSetup from "./components/gameLogic/GameSetup";
+import Bid from "./components/creditController/Bid";
+import RanksViews from "./components/tableViews/RanksViews";
 
 const Root = () => {
+  // window.onbeforeunload = () => {
+  //   alert("tab closed");
+  // };
+
   return (
-    <>
-      <PullDecks />
-      <PullsCards />
-      <AddCardsToRoundsHistory />
-      <Reset />
-      <GameSetup />
-      <TableViews />
-    </>
+    <div className="gameWrapper">
+      <div>
+        <PullDecks />
+        <GameSetup />
+      </div>
+      <div className="tableViews">
+        <TableViews />
+      </div>
+      <div className="actionsWrapper">
+        <Bid />
+        <Reset />
+      </div>
+      <div className="rankViews">
+        <RanksViews />
+      </div>
+    </div>
   );
 };
 

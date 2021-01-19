@@ -3,6 +3,8 @@
 import React from "react";
 import { connect } from "react-redux";
 import { bidBet } from "../../actions";
+import PullsCards from "../cardsManagement/PullsCards";
+import CroupierAi from "../gameLogic/CroupierAi";
 
 const Bid = ({ bidBet, credit, ourBid }) => {
   const handleHit = (e) => {
@@ -16,12 +18,14 @@ const Bid = ({ bidBet, credit, ourBid }) => {
   };
 
   return (
-    <div>
+    <div className="bidsWrapper">
       <form onSubmit={handleHit}>
-        <input type number name="bid" placeholder="Obstaw zakład" />
+        <input type number name="bid" placeholder="Bid " />
         <button type="submit">BID</button>
       </form>
       <button onClick={() => handleDoubleDown()}>Double Down</button>
+      <PullsCards />
+      <CroupierAi />
     </div>
   );
 };
